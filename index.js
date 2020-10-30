@@ -7,6 +7,7 @@ const socketIO = require('socket.io');
 const INDEX = '/index.html';
 
 const MONGODB_URI = process.env.MONGODB_URI;
+// mongodb+srv://jswill88:D0uvNl4EL4qJ5uJZ@cluster0.rkyyz.mongodb.net/users?retryWrites=true&w=majority
 
 const mongooseOptions = {
   useNewUrlParser: true,
@@ -17,7 +18,7 @@ const mongooseOptions = {
 const socketServer = server.app
   .use((request, response) => response.sendFile(INDEX, { root: __dirname }))
   .listen(process.env.PORT, () =>
-    console.log(`listening on ${process.env.PORT}`)
+    console.log(`listening on ${process.env.PORT}`),
   );
 
 mongoose.connect(MONGODB_URI, mongooseOptions);
