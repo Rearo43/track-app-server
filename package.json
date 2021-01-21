@@ -31,6 +31,6 @@
     "jest": "^26.5.3",
     "mongoose": "^5.10.9",
     "socket-io": "^1.0.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
